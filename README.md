@@ -13,6 +13,6 @@ cargo install --locked trunk
 # Run dev server
 trunk serve
 
-# Build
-trunk build --release
+# Build release to docs dir
+trunk build --release -d docs
 ```
