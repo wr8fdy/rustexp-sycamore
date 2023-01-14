@@ -14,5 +14,5 @@ cargo install --locked trunk
 trunk serve
 
 # Build release to docs dir
-trunk build --release -d docs
+trunk build --release -d docs --public-url rustexp-sycamore
 ```

@@ -48,7 +48,7 @@ fn main() {
 
                 div(class="container max-w-5xl text-slate-400 text-left font-mono mt-10 pb-8 px-1") {
                     p(class="mt-8 text-white") {"Reference:"}
-                    ul(class="list-none mt-4 columns-3 pl-2") {
+                    ul(class="list-none mt-4 columns-1 md:columns-3 pl-2") {
                         Indexed(
                             iterable=reference,
                             view=|cx, Code { code, desc }| view! { cx,
@@ -57,7 +57,7 @@ fn main() {
                         )
                     }
                     p(class="mt-8 text-white") { "Modifiers (enable: " code{"(?a)"} ", disable: " code{"(?-a)"} "}):" }
-                    ul(class="list-none mt-4 columns-3 pl-2") {
+                    ul(class="list-none mt-4 columns-1 md:columns-3 pl-2") {
                         Indexed(
                             iterable=modifiers,
                             view=|cx, Code { code, desc }| view! { cx,

@@ -456,7 +456,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('rustexp-sycamore-f45edcec7f000dee_bg.wasm', import.meta.url);
+        input = new URL('rustexp-sycamore-35ebea8fddaa7b00_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 
