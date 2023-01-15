@@ -13,7 +13,7 @@ fn main() {
         let pattern = create_signal(cx, String::new());
         let subject = create_signal(cx, String::new());
 
-        let double = create_memo(cx, || {
+        let result = create_memo(cx, || {
             let pattern = pattern.get().to_string();
             let subject = subject.get().to_string();
 
@@ -42,7 +42,7 @@ fn main() {
                         }
                     }
                     div(class="container overflow-auto bg-slate-700 text-slate-300 p-2 mt-6 text-white") {
-                        pre(class="h-full") {(*double.get())}
+                        pre(class="h-full") {(*result.get())}
                     }
                 }
 
