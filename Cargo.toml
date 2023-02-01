@@ -8,3 +8,9 @@ version = "0.1.0"
 [dependencies]
 regex = "1.7.1"
 sycamore = "0.8.2"
+wee_alloc = "0.4.5"
+
+[profile.release]
+lto = true
+opt-level = 'z'
+strip = true

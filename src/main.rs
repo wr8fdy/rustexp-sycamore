@@ -1,6 +1,11 @@
 use regex::bytes::Regex;
 use std::fmt::Write;
 use sycamore::prelude::*;
+use wee_alloc;
+
+// Use `wee_alloc` as the global allocator.
+#[global_allocator]
+static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 struct Code {
@@ -14,8 +19,8 @@ fn main() {
         let subject = create_signal(cx, String::new());
 
         let result = create_memo(cx, || {
-            let pattern = pattern.get().to_string();
-            let subject = subject.get().to_string();
+            let pattern = pattern.get();
+            let subject = subject.get();
 
             run_regex(&pattern, &subject)
         });
