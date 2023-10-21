@@ -64,7 +64,7 @@ fn main() {
                     p(class="mt-8 text-white") {
                         "Modifiers (enable: "
                         code(class="bg-slate-700 leading-relaxed mr-2 px-1 whitespace-nowrap"){"(?a)"} ", disable: "
-                        code(class="bg-slate-700 leading-relaxed mr-2 px-1 whitespace-nowrap"){"(?-a)"} "}):"
+                        code(class="bg-slate-700 leading-relaxed mr-2 px-1 whitespace-nowrap"){"(?-a)"} "):"
                     }
                     ul(class="list-none mt-4 columns-1 md:columns-3 pl-2") {
                         Indexed(
